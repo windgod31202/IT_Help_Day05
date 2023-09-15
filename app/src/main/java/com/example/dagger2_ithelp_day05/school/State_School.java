@@ -16,6 +16,7 @@ public class State_School implements School{
 
     @Override
     public void buildSchoolType() {
+        Log.e(TAG, "buildSchoolType: "+TAG);
 
     }
 }

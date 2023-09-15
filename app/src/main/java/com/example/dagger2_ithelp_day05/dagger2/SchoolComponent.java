@@ -7,8 +7,11 @@ import com.example.dagger2_ithelp_day05.module.StudentModule;
 import com.example.dagger2_ithelp_day05.module.TeacherModule;
 import com.example.dagger2_ithelp_day05.school.School;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 
+//@Singleton
 @Component(modules = {StudentModule.class,
                     TeacherModule.class,
                     StateSchoolModule.class})

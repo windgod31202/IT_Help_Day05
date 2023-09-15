@@ -1,5 +1,7 @@
 package com.example.dagger2_ithelp_day05.school;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 public class Independent_School implements School {
@@ -12,6 +14,6 @@ public class Independent_School implements School {
 
     @Override
     public void buildSchoolType() {
-
+        Log.e(TAG, "buildSchoolType: "+ TAG );
     }
 }

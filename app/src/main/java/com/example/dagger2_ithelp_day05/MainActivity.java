@@ -13,7 +13,7 @@ import javax.inject.Inject;
 public class MainActivity extends AppCompatActivity {
 
     @Inject
-    EducationSystem educationSystem;
+    EducationSystem educationSystem01, educationSystem02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +23,8 @@ public class MainActivity extends AppCompatActivity {
         SchoolComponent schoolComponent = DaggerSchoolComponent.create();
 
         schoolComponent.inject(this);
+
+        educationSystem01.start();
+        educationSystem02.start();
     }
 }
