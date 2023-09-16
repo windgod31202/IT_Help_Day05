@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import com.example.dagger2_ithelp_day05.dagger2.DaggerSchoolComponent;
 import com.example.dagger2_ithelp_day05.dagger2.SchoolComponent;
-import com.example.dagger2_ithelp_day05.school.School;
 
 import javax.inject.Inject;
 
@@ -20,7 +19,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        SchoolComponent schoolComponent = DaggerSchoolComponent.create();
+        SchoolComponent schoolComponent = DaggerSchoolComponent.builder()
+                .score(500)
+                .name("國立台中科技大學")
+                .worldRanking(3415)
+                .build();
 
         schoolComponent.inject(this);
 
